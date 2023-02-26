@@ -1,0 +1,45 @@
+header{
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+h3{
+    font-size: 28px;
+    margin: 5px 0 5px 0;
+    font-weight: 500;
+}
+
+h4{
+    color: #484545
+}
+
+.card-container{
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch space-between;
+}
+
+mat-card{
+    width: 45%;
+    border: 1px solid lightgrey;
+    border-left-width: 3px;
+    border-left-color: #ffa500;
+    box-shadow: 0 0 4px rgb(0 0 0 / 40%);
+    margin: 10px 0 10px 0px;
+}
+
+@media only screen and (max-width: 575px) {
+    mat-card {
+        width: 100%;
+    }
+}
+
+mat-card > div{
+    font-size: 14px;
+    color: #877e7e;
+}
+
+mat-card > h4{
+    margin-bottom: 8px;
+}

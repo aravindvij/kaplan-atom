@@ -1,0 +1,22 @@
+<div class="atom-container">
+    <header class="d-flex">
+        <h3>Books</h3>
+        <div class="btn-container">
+            <button class="primary-btn" (click)="createBook()">Create New book</button>
+        </div>
+    </header>
+    <div class="d-flex">
+        <mat-icon>search</mat-icon>
+        <input matInput placeholder="Search" [(ngModel)]="searchBook"/>
+    </div>
+    <h4>All Books</h4>
+    <div class="card-container">
+        <mat-card *ngFor="let book of bookList | filterBooks: searchBook">
+            <h4>{{book.volumeInfo.title}}</h4>
+            <div>Authors: {{book.volumeInfo.authors[0]}}</div>
+            <div>Publisher: {{book.volumeInfo.publisher}}</div>
+            <div>Published Date: {{book.volumeInfo.publishedDate}}</div>
+        </mat-card>
+    </div>
+</div>
+
